@@ -4,7 +4,8 @@ export interface Carta {
     valor: number;
 }
 
-export const mazo: Carta[] = [
+
+export const cartas: Carta[] = [
     {
         nombre: "leon1",
         imagen: "https://github.com/Lemoncode/fotos-ejemplos/blob/main/memo/1.png?raw=true",

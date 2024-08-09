@@ -1,4 +1,4 @@
-import { mazo } from "./model";
+import { cartas } from "./model";
 
 function barajar<T>(array: T[]): T[] {
     for (let i = array.length - 1; i > 0; i--) {
@@ -10,4 +10,4 @@ function barajar<T>(array: T[]): T[] {
 
 // Ejemplo de uso:
 
-console.log(barajar(mazo));
+console.log(barajar(cartas));
