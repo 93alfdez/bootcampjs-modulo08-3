@@ -1,4 +1,4 @@
-export interface Carta {
+export interface Cartas {
     nombre: string;
     imagen: string;
     valor: number;

@@ -1,18 +1,21 @@
 import { cartas } from "./model";
 
-export const mostrarImagen = (carta: Carta) => {
-	const imgCarta = document.getElementById("imgCarta");
-
-	if (app && app instanceof HTMLDivElement) {
-		const crearDivImagenes = crearContenedor(carta.nombre, app);
-		crearDivImagenes.innerHTML = `<img src="${carta.imagen}" alt="${carta.nombre}" />`;
-	}
-
-    if 
+export const mostrarImagen = (urlImg: string) => {
+    const imgCarta = document.getElementById("carta");
+    if (imgCarta !== null && imgCarta !== undefined && imgCarta instanceof HTMLImageElement) {
+        imgCarta.src = urlImg;
+    }
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-	const divCarta = document.getElementById("app");
+    const divCartas = document.getElementById("gridCartas");
 
-	mostrarImagen("leon1");
+    if (divCartas !== null &&
+        divCartas !== undefined &&
+        divCartas instanceof HTMLDivElement
+    ) {
+        divCartas.addEventListener("click", () => {
+            mostrarImagen(cartas[1].imagen);
+        })
+    }
 });
