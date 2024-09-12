@@ -1,6 +1,11 @@
-.carta {
-  width: 150px;
-  height: 150px;
-  background-color: cadetblue;
-  border-radius: 5px;
+body{
+  background-color: #E6FFFD;
+}
+
+#carta {
+  width: 100px;
+  height: 100px;
+  background-color: #AFE1FF;
+  border-radius: 24px;
+  padding: 30px;
 }

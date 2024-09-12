@@ -1,7 +1,7 @@
 import { cartas } from "./model";
 
 export const mostrarImagen = (urlImg: string) => {
-    const imgCarta = document.getElementById("imgCarta");
+    const imgCarta = document.getElementById("carta");
     if (imgCarta !== null && imgCarta !== undefined && imgCarta instanceof HTMLImageElement) {
         imgCarta.src = urlImg;
     }

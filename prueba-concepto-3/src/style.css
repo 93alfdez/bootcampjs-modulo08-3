@@ -1,0 +1,20 @@
+body{
+  background-color: #E6FFFD;
+}
+
+#grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+  padding-top: 48px;
+}
+
+#carta {
+  width: 100px;
+  height: 100px;
+  background-color: #AFE1FF;
+  border-radius: 24px;
+  padding: 30px;
+}
