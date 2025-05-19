@@ -1,21 +1,14 @@
 import { cartas } from "./model";
 
+const divCartas = document.getElementById("carta");
+
 export const mostrarImagen = (urlImg: string) => {
-    const imgCarta = document.getElementById("imgCarta");
-    if (imgCarta !== null && imgCarta !== undefined && imgCarta instanceof HTMLImageElement) {
-        imgCarta.src = urlImg;
-    }
+  const imgCarta = document.getElementById("imgCarta");
+  if (imgCarta instanceof HTMLImageElement) {
+    imgCarta.src = urlImg;
+  }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    const divCartas = document.getElementById("gridCartas");
-
-    if (divCartas !== null &&
-        divCartas !== undefined &&
-        divCartas instanceof HTMLDivElement
-    ) {
-        divCartas.addEventListener("click", () => {
-            mostrarImagen(cartas[0].imagen);
-        })
-    }
+divCartas?.addEventListener("click", () => {
+  mostrarImagen(cartas[0].imagen);
 });

@@ -1,21 +1,33 @@
 import { cartas } from "./model";
 
-export const mostrarImagen = (urlImg: string) => {
-    const imgCarta = document.getElementById("carta");
-    if (imgCarta !== null && imgCarta !== undefined && imgCarta instanceof HTMLImageElement) {
-        imgCarta.src = urlImg;
-    }
+const divCarta2 = document.getElementById("carta2");
+const divCarta1 = document.getElementById("carta1");
+
+// export const mostrarImagen = (imgID: string, urlImg: string) => {
+//   const imgCarta = document.getElementById(imgID);
+//   if (imgCarta instanceof HTMLImageElement) {
+//     imgCarta.src = urlImg;
+//   }
+// };
+
+// divCarta1?.addEventListener("click", () => {
+//   mostrarImagen("imgCarta1", cartas[0].imagen);
+// });
+
+// divCarta2?.addEventListener("click", () => {
+//   mostrarImagen("imgCarta2", cartas[1].imagen);
+// });
+
+export const mostrarImagen = (divCarta: HTMLElement, urlImg: string) => {
+  if (divCarta.firstElementChild instanceof HTMLImageElement) {
+    divCarta.firstElementChild.src = urlImg;
+  }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    const divCartas = document.getElementById("gridCartas");
+divCarta1?.addEventListener("click", () => {
+  mostrarImagen(divCarta1, cartas[0].imagen);
+});
 
-    if (divCartas !== null &&
-        divCartas !== undefined &&
-        divCartas instanceof HTMLDivElement
-    ) {
-        divCartas.addEventListener("click", () => {
-            mostrarImagen(cartas[0].imagen);
-        })
-    }
+divCarta2?.addEventListener("click", () => {
+  mostrarImagen(divCarta2, cartas[2].imagen);
 });
